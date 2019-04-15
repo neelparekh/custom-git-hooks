@@ -1,5 +1,5 @@
 # custom-git-hooks
-Follow the steps below to add custom git hooks to any repository. This repository contains the magical `hooks/autohook.sh` (a script which is almost entirely borrowed -- with few modifications -- from [this repository by nkantar](https://github.com/nkantar/Autohook)) as well as a few example custom sample scripts you could use.
+Follow the steps below to add custom git hooks to any repository. This repository contains the magical `hooks/autohook.sh` (a script which is almost entirely borrowed -- with few modifications -- from [this repository by nkantar](https://github.com/nkantar/Autohook)) as well as a few example custom scripts you could use.
 
 
 ## Background
