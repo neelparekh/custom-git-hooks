@@ -17,7 +17,7 @@ Additionally, please copy the `hooks/autohook.sh` script into the hooks subdirec
 
 Finally, for each code routine you'd like to run, create shell scripts for each action. I like to separate these actions into discrete scripts since I tend to reuse parts of the routine across hooks. Your folder structure and example script should now look something like this for a repository named 'bayesianinferencetoolkit':
 
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+![Folder Setup](/images/foldersetup.png?raw=true "Folder Setup")
 
 Here I have created an example script that will auto-generate documentation from docstrings (and another that will add the auto-generated documentation to the commit) every time I commit to the local repository. The final step is to (1) open terminal and make the `autohook.sh` script executable and (2) then run the autohook.sh bash script:
 
@@ -27,7 +27,7 @@ chmod +x hooks/autohook.sh
 ```
 
 We have now installed the symbolic links between the in-built (empty by default) git hooks and our custom hook scripts.
-Now when committing, I observe the following output on the terminal:
+Now when committing, you should observe the output of `autohook.sh` on the terminal
 
 
 You should be able to push this code into a remote repository, and in order for other users/developers to activate your git custom git hooks, they simply need to clone your repository and run the `autohook.sh` script with the `install` parameter as we did above. The symbolic links will be automatically created on their system.
