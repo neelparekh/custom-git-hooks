@@ -1,5 +1,5 @@
 # custom-git-hooks
-Follow the steps below to add custom git hooks to any repository. This repository contains the magical `hooks/autohook.sh` (a script which is almost entirely borrowed with few modifications from [this repository by nkantar](https://github.com/nkantar/Autohook)) as well as a few example custom sample scripts you could use.
+Follow the steps below to add custom git hooks to any repository. This repository contains the magical `hooks/autohook.sh` (a script which is almost entirely borrowed -- with few modifications -- from [this repository by nkantar](https://github.com/nkantar/Autohook)) as well as a few example custom sample scripts you could use.
 
 
 ## Background
@@ -37,7 +37,7 @@ You should be able to push this code into a remote repository, and in order for 
 
 Git hooks are installed in every repository by default in the hidden folder `.git/hooks`. The problem with this is that `.git` is a hidden folder and changes in this folder and its subdirectories are ignored. I.e. if we place custom hooks scripts here and push our changes to a remote repository, the custom scripts will be ignored. In order to circumvent this problem, we place our scripts in a hooks folder in our main repository (so that it's not hidden) and create symbolic links to the appropriate subdirectories in `.git/hooks` so that when git tries to run the git hooks from the hidden folder, it is essentially redirected to our custom scripts.
 
-The `autohook.sh` script is magical in that it finds all executable scripts that exist in the hooks subdirectories and automatically links them to the appropriate git hooks based on the name of parent folder of the script.
+The `autohook.sh` script is magical in that it finds all executable scripts that exist in the hooks subdirectories and automatically links them to the appropriate git hooks based on the name of script's parent folder.
 
 
 ## Acknowledgements
